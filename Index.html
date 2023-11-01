@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHBOARD FOR KPCIP CIU ABBOTTABAD PROJECTS</title>
+    <style>
+        /* Add your custom CSS styles here */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .dashboard {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .tab-bar {
+            display: flex;
+            background-color: #333;
+            padding: 10px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tab-button {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            cursor: pointer;
+            flex-grow: 1;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .project-buttons {
+            display: none;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .project-buttons .tab-button {
+            flex-basis: calc(25% - 20px);
+            margin: 5px;
+        }
+
+        .project-iframe {
+            flex-grow: 1;
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            DASHBOARD FOR KPCIP CIU ABBOTTABAD PROJECTS
+        </div>
+        <div class="tab-bar">
+            <button id="project1-tab" class="tab-button" onclick="loadProject('project1')">Water Supply Scheme</button>
+            <button id="project2-tab" class="tab-button" onclick="loadProject('project2')">Green & Urban spaces Initiative</button>
+            <button id="project3-tab" class="tab-button" onclick="loadProject('project3')">Pedestrianisation Of Old City</button>
+            <button id="ciu-staff-tab" class="tab-button" onclick="loadProject('ciu-staff')">CIU Staff</button>
+
+            <button id="ciu-letters-tab" class="tab-button" onclick="loadProject('ciu-letters')">CIU Letters</button>
+        </div>
+        <div id="project-buttons" class="project-buttons">
+            <!-- Buttons for the "Water Supply Scheme" sub-projects -->
+            <button id="water-supply-1" class="tab-button" onclick="loadSubProject('subproject1/index.html')">C & W</button>
+            <button id="water-supply-2" class="tab-button" onclick="loadSubProject('subproject2/index.html')">NHA</button>
+            <button id="water-supply-3" class="tab-button" onclick="loadSubProject('subproject3/index.html')">Water Tanks</button>
+            <button id="water-supply-4" class="tab-button" onclick="loadSubProject('subproject4/index.html')">Updated Route</button>
+        </div>
+        <iframe id="project-iframe" class="project-iframe"></iframe>
+    </div>
+    <script>
+        // Function to load project HTML into the iframe
+        function loadProject(projectName) {
+            const iframe = document.getElementById('project-iframe');
+            const projectPath = `${projectName}/index.html`;
+
+            if (projectName === 'project1') {
+                // Show the sub-project buttons for "Water Supply Scheme"
+                document.getElementById('project-buttons').style.display = 'flex';
+            } else {
+                // Hide the sub-project buttons if a different project is selected
+                document.getElementById('project-buttons').style.display = 'none';
+            }
+
+            iframe.src = projectPath;
+        }
+
+        // Function to load sub-project HTML into the iframe
+        function loadSubProject(subProjectPath) {
+            const iframe = document.getElementById('project-iframe');
+            const subProjectFullPath = `project1/${subProjectPath}`;
+            iframe.src = subProjectFullPath;
+        }
+
+        // Initial project selection (you can set the default project here)
+        loadProject('project1');
+    </script>
+</body>
+</html>

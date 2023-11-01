@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUS Incoming Letters</title>
+    <style>
+        /* Add your custom CSS styles here */
+        body {
+            font-family: Arial, sans-serif;font-size: medium;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        input[type="text"] {
+            width: 98.5%;
+            padding: 10px;
+            margin: 10px auto;
+        }
+
+        .view-button {
+            background-color: #0074d9;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .download-button {
+            background-color: #2ecc40;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .main-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .main-button {
+            background-color: #555;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        /* Display: none for sub-buttons and table container */
+        .sub-button, #lettersTableContainer {
+            display: none;
+        }
+        h1 {
+            background-color: #0074d9; /* Background color (you can change this to your preferred color) */
+            color: #fff; /* Text color */
+            padding: 10px 20px; /* Padding for the text inside the heading */
+            border: 2px solid #0056b3; /* Border around the heading */
+            border-radius: 5px; /* Rounded corners for the heading */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>GREEN AND URBAN SPACES Incoming Letters</h1>
+    <div class="main-buttons">
+        <button class="main-button" onclick="loadSubProject('incoming')">GREEN AND URBAN SPACES Incoming Letters</button>
+    </div>
+
+    <input type="text" id="searchInput" placeholder="Search documents...">
+
+    <!-- Add a container div to wrap the table and set its initial display to none -->
+    <div id="lettersTableContainer">
+        <table id="documentTable">
+            <thead>
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Subject</th>
+                    <th>Reference</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Date</th>
+                    <th>Receiving Date</th>
+                    <th>Source File</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>NOCs for Sub Projects under KPCIP</td>
+                    <td>LGE&RDD/KPCIP/2022/3233-3238</td>
+                    <td>D.T PMU-KPCIP</td>
+                    <td>CEO WSSCA</td>
+                    <td>30-Jun-22</td>
+                    <td>04-Jul-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/1.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Notification of Grievances Redressal Committee for KPCIP sub Projects</td>
+                    <td>4048-50</td>
+                    <td>Add. Deputy Commissioner Atd</td>
+                    <td>CEO WSSCA</td>
+                    <td>20-Sep-22</td>
+                    <td>09-Sep-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/2.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Pursuance on Construction Of Water tanks through private Negotiation</td>
+                    <td>KPCIP/PMU/LGE&RDD/2022-23/127-131</td>
+                    <td>P.D KPCIP</td>
+                    <td>Deputy Commissioner Atd</td>
+                    <td>21-Jul-22</td>
+                    <td>26-Jul-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/3.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Physical Activities On Sub-Projects "Green Initiatives" Under KPCIP</td>
+                    <td>LGE&RDD/KPCIP/2022/135-137</td>
+                    <td>D.T PMU-KPCIP</td>
+                    <td>CEO WSSCA</td>
+                    <td>22-Jul-22</td>
+                    <td>25-Jul-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/4.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>No Objection Certificate (NOC's) For Sub-Projects Under KPCIP</td>
+                    <td>LGE&RDD/KPCIP/2022/186-190</td>
+                    <td>D.T PMU-KPCIP</td>
+                    <td>CEO WSSCA</td>
+                    <td>25-Jul-22</td>
+                    <td>26-Jul-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/5.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Detail Presentation Regarding Green Initiative Projects</td>
+                    <td>LGE&RDD/KPCIP/2022/200-210</td>
+                    <td>D.T PMU-KPCIP</td>
+                    <td>CEO M/S CSC & CEO WSSCA</td>
+                    <td>26-Jul-22</td>
+                    <td>27-Jul-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/6.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Meeting of Meeting On Progress Review At KPCIP-PMU</td>
+                    <td>KPCIP/PMU-Admin/2022-23/2014-2023</td>
+                    <td>P.D KPCIP</td>
+                    <td>CEO WSSCA</td>
+                    <td>21-Sep-22</td>
+                    <td>03-Oct-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/7.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Meeting of Project Staff Recruitment Committee</td>
+                    <td>KPCIP/Admin/General/2022-23/2253-2268</td>
+                    <td>Director Finance & Admin PMU KPCIP</td>
+                    <td>CEO WSSCA</td>
+                    <td>12-Oct-22</td>
+                    <td></td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/8.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Nomination of Focal Persons For Disbursement committee</td>
+                    <td>KPCIP/PMU/LGE&RD/Compliance/2022-23/2397-2408</td>
+                    <td>Director Compliance PMU-KPCIP</td>
+                    <td>CEO WSSCA</td>
+                    <td>20-Oct-22</td>
+                    <td>24-Oct-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/9.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Minutes of the Disbursement Committee For The Abbottabad City</td>
+                    <td>PMU-KPCIP/IVS-RP/Fund/2480-2491</td>
+                    <td>Director Compliance PMU-KPCIP</td>
+                    <td>CEO WSSCA</td>
+                    <td>25-Oct-22</td>
+                    <td>26-Oct-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/10.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Minutes of the 1st Disbursement Committee Of The KPCIP</td>
+                    <td>KPCIP/Compliance/S.General/2022-23/2586-2597</td>
+                    <td>Director Compliance PMU-KPCIP</td>
+                    <td>CEO WSSCA</td>
+                    <td>27-Oct-22</td>
+                    <td>31-Oct-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/11.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Non-Cooperation of Mr. Qasim Ali (M&E Officer), CIU-KPCIP, WSSC Abbottabad</td>
+                    <td>KPCIP/Admin/CIUs/04(A)/2022-23/2630-2638</td>
+                    <td>Admin & Procurement Officer PMU-KPCIP</td>
+                    <td>CEO WSSCA</td>
+                    <td>27-Oct-22</td>
+                    <td>31-Oct-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/12.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Notification of The Engineers Of The Project As per Sub-Clauses 1.1.2.4 & 3.1 Of GCC/PCC</td>
+                    <td>KPCIP/Admn/S.General/2022-23/2598-2607</td>
+                    <td>P.D KPCIP</td>
+                    <td>CEO WSSCA</td>
+                    <td>27-Oct-22</td>
+                    <td>22-Nov-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/13.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Submission of Records Apropos Contractor's Personnel And Equipments In Accordance With Sub-Clause 6.9 & 6.10 of GCC/PCC</td>
+                    <td>KPCIP/PMCSC/RE/ATD/Lot-1/003</td>
+                    <td>RE (Green & Urban Spaces)</td>
+                    <td>CEO M/S JHK & CEO WSSCA</td>
+                    <td>01-Nov-22</td>
+                    <td>02-Nov-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/14.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Submission of Detail Time Programme/ Working Schedule in Accordance With Sub-Clause 8.3 of GCC/PCC</td>
+                    <td>KPCIP/PMCSC/RE/ATD/Lot-1/002</td>
+                    <td>RE (Green & Urban Spaces)</td>
+                    <td>CEO M/S JHK & CEO WSSCA</td>
+                    <td>01-Nov-22</td>
+                    <td>02-Nov-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/15.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Submission of Contractor's Representative In Accordance with Sub-Clause 4.3 of GCC/PCC</td>
+                    <td>KPCIP/PMCSC/RE/ATD/Lot-1/004</td>
+                    <td>RE (Green & Urban Spaces)</td>
+                    <td>CEO M/S JHK & CEO WSSCA</td>
+                    <td>01-Nov-22</td>
+                    <td>03-Nov-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/16.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Submission of Site Specific Environmental Management Plan (SSEMP) And Site Specific Health and Safety Management Plan In Accordance with Sub-Clause 4.18 & 6.7 of GCC/PCC</td>
+                    <td>KPCIP/PMCSC/RE/ATD/Lot-1/001</td>
+                    <td>RE (Green & Urban Spaces)</td>
+                    <td>CEO M/S JHK & CEO WSSCA</td>
+                    <td>01-Nov-22</td>
+                    <td>02-Nov-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/17.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Appointment of Dispute Board Under Sub Clause 20.2 of GCC/PCC</td>
+                    <td>KPCIP/DT/GS/PR/2022-23/3033-42</td>
+                    <td>D.T PMU-KPCIP</td>
+                    <td>CEO WSSCA</td>
+                    <td>11-Nov-22</td>
+                    <td>14-Nov-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/18.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Request for Submission of Insurance in Accordance with Clause 18 [INSURANCE] of GCC/PCC</td>
+                    <td>KPCIP/PMCSC/RE/ATD/Lot-1/015</td>
+                    <td>RE (Green & Urban Spaces)</td>
+                    <td>CEO M/S JHK</td>
+                    <td>11-Nov-22</td>
+                    <td>15-Nov-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/19.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>#3 Sample of Soil for Modified Proctor Test (AASHTO T-99 & T-180)</td>
+                    <td>KPCIP/PMCSC/RE/ATD/Lot-1/2022/016</td>
+                    <td>Department Of Civil Engg Comsats ATD/CEO WSSCA</td>
+                    <td></td>
+                    <td>15-Nov-22</td>
+                    <td>16-Nov-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/20.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>OCB/KPCIP/CW-01: Clearance of Impediments In the Stated Project</td>
+                    <td>KPCIP/PMCSC/RE/ATD/Lot-1/017</td>
+                    <td>CEO WSSCA</td>
+                    <td></td>
+                    <td>16-Nov-22</td>
+                    <td>16-Nov-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/21.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>Nomination of Focal Persons During visit of ADB Mission Of Different Districts of KPK</td>
+                    <td>KPCIP/Admn/S.General</td>
+                    <td>P.D KPCIP</td>
+                    <td>CEO WSSCA</td>
+                    <td>21-Nov-22</td>
+                    <td></td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/22.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>Notification of The Engineer(s) Pursuant to Sub-Clause 1.1.2.4 and 3.1 of GCC/PCC</td>
+                    <td>KPCIP/PMCSC/PMU/005</td>
+                    <td>CEO M/S CEC</td>
+                    <td>P.D KPCIP</td>
+                    <td>01-Dec-22</td>
+                    <td>14-Dec-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/23.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>Meeting of Project Staff Recruitment Committee</td>
+                    <td>KPCIP/Admin/2022-23/2783-2799</td>
+                    <td>D.T PMU-KPCIP</td>
+                    <td>CEO WSSCA</td>
+                    <td>07-Dec-22</td>
+                    <td>10-Nov-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/24.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>Appointment of Dispute Board Under Sub Clause 20.2 of GCC/PCC</td>
+                    <td>KPCIP/DT/GS/PR/2022-23/5027-36</td>
+                    <td>D.T PMU-KPCIP</td>
+                    <td>CEO WSSCA</td>
+                    <td>13-Dec-22</td>
+                    <td>14-Dec-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/25.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>Provision of Technical Sanction (TS) of Sub-Projects Under KPCIP LGE&RDD</td>
+                    <td>KPCIP/DT/GS/PR/2022-23/5015-26</td>
+                    <td>D.T PMU-KPCIP</td>
+                    <td>CEO WSSCA</td>
+                    <td>13-Dec-22</td>
+                    <td>14-Dec-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/26.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>Relocation of CIU Office Abbottabad</td>
+                    <td>KPCIP/Admin/S.General/2022-23/5118-21</td>
+                    <td>Procurement & Admin Officer PMU-KPCIP</td>
+                    <td>CEO WSSCA</td>
+                    <td>16-Dec-22</td>
+                    <td></td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/27.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>KPCIP -02: Institutional Review And Capacity Building Consultant. Meeting of Technical Committee</td>
+                    <td>KPCIP/DT/Misc/2022-23/5099-5113</td>
+                    <td>WATSAN Specialist</td>
+                    <td>CEO WSSCA</td>
+                    <td>16-Dec-22</td>
+                    <td></td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/28.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>Official Use of Vehicles Of City Implementation Unit (CIU) KPCIP</td>
+                    <td>KPCIP/Admin/S.General/2022-23/5214-17</td>
+                    <td>Procurement & Admin Officer PMU-KPCIP</td>
+                    <td>CEO WSSCA</td>
+                    <td>21-Dec-22</td>
+                    <td>23-Dec-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/29.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>Contractor [M/S Matracon-JTE (JV) Request for Extension of Time On Advance Payment Guarantee Under Sub-Clause 14.2 Of PCC</td>
+                    <td>KPCIP/DT/STP/MN/2022-23/5249-63</td>
+                    <td>D.T PMU-KPCIP</td>
+                    <td>CEO WSSCA</td>
+                    <td>22-Dec-22</td>
+                    <td>23-Dec-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/30.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>31</td>
+                    <td>Delivery of Training Program-Human Resource (Workforce) Management training code 3.1</td>
+                    <td>KPCIP/Misc/2022-23/5241-48</td>
+                    <td>Urban Development Specialist PMU-KPCIP</td>
+                    <td>CEO WSSCA</td>
+                    <td>22-Dec-22</td>
+                    <td></td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/31.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>32</td>
+                    <td>KPCIP Development of Urban/green Spaces and Parks LOT-1 Pedestrianization of Old City Bazar & Development of Sherwan Hill Park</td>
+                    <td>674-75/21/5</td>
+                    <td>Add. Chief Eng Pesco hazara-1, Circle</td>
+                    <td>CEO PESCO Peshawar</td>
+                    <td>19-Jan-23</td>
+                    <td>19-Jan-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/32.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>33</td>
+                    <td>Request for Issuance of Umbrella NOC in Respect for Execution of Sub Project Under KPCIP</td>
+                    <td>1203/TMA</td>
+                    <td>TMO TMA ATD</td>
+                    <td>CEO WSSCA</td>
+                    <td>07-Feb-23</td>
+                    <td></td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/33.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>34</td>
+                    <td>Design Facilities in Front of Sarafa Bazar</td>
+                    <td>KPCIP/PMCSC/RE/ATD/Lot-1/041</td>
+                    <td>CEO WSSCA</td>
+                    <td></td>
+                    <td>13-Mar-23</td>
+                    <td></td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/34.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>35</td>
+                    <td>Interim Payment Certificate No.1 (CW-01, Lot-01)</td>
+                    <td>KPCIP/DT/UGS/ATD/2023-24/8893-8898</td>
+                    <td>WATSAN Specialist</td>
+                    <td>CEO WSSCA</td>
+                    <td>12-May-23</td>
+                    <td>15-May-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/35.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>36</td>
+                    <td>Abnormal Delay in Release Of IPC #1</td>
+                    <td>Reliable-JHK/KPCIP/L-1/AA/80</td>
+                    <td>P.M JHK</td>
+                    <td>P.D KPCIP</td>
+                    <td>21-Jun-23</td>
+                    <td></td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/36.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>37</td>
+                    <td>Abnormal Delay in Release Of IPC #1 (Reminder #1)</td>
+                    <td>Reliable-JHK/KPCIP/L-1/AA/82 Remind-1</td>
+                    <td>P.M JHK</td>
+                    <td>P.D KPCIP</td>
+                    <td>05-Jul-23</td>
+                    <td>05-Jul-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/37.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>38</td>
+                    <td>Minutes of the meeting Regarding review of KPCIP Project in Abbottabad</td>
+                    <td>42/4/AD/ACD/CHD(Dev)/7358-63</td>
+                    <td>Commissioner Hazara</td>
+                    <td>CEO WSSCA</td>
+                    <td>10-Jul-23</td>
+                    <td>21-Jul-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/38.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>39</td>
+                    <td>Interim Payment Certificate No.1 (CW-01, Lot-01)</td>
+                    <td>KPCIP/DT/UGS/ATD/2023-24/163-169</td>
+                    <td>WATSAN Specialist</td>
+                    <td>RE PMCSC KPCIP</td>
+                    <td>10-Jul-23</td>
+                    <td>21-Jul-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/39.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>Design Facilities in Front of Sarafa Bazar</td>
+                    <td>KPCIP/PMCSC/RE/ATD/Lot-1/101</td>
+                    <td>CEO WSSCA</td>
+                    <td></td>
+                    <td>14-Jul-23</td>
+                    <td></td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/40.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>41</td>
+                    <td>Notification of Base Index Rates Adjustment for Changes in Cost Under Provisions of Sub-Clause 13.8, GCC</td>
+                    <td>KPCIP/DT/UGS/ATD/2023-24/339-345</td>
+                    <td>WATSAN Specialist</td>
+                    <td>CEO WSSCA</td>
+                    <td>18-Jul-23</td>
+                    <td></td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/41.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>42</td>
+                    <td>Submission Of Escalation Payment Certificate (EPC) No.01 LOT.1</td>
+                    <td>Reliable-JHK/KPCIP-01/ABT-LOT-1/67</td>
+                    <td>P.M JHK</td>
+                    <td>RE (Green & Urban Spaces)</td>
+                    <td>19-Jul-23</td>
+                    <td></td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/42.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>43</td>
+                    <td>Provision Of Technical Sanction (TS) of Awarded Sub-project Under KPCIP</td>
+                    <td>KPCIP/PMCSC/RE/ATD/Lot-1/104</td>
+                    <td>RE (Green & Urban Spaces)</td>
+                    <td>CEO WSSCA</td>
+                    <td>19-Jul-23</td>
+                    <td></td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/43.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>44</td>
+                    <td>Submission Of Escalation Payment Certificate No 21: Price Adjustment No.01</td>
+                    <td>KPCIP/PMCSC/RE/ATD/Lot-1/105</td>
+                    <td>RE (Green & Urban Spaces)</td>
+                    <td>P.D KPCIP</td>
+                    <td>21-Jul-23</td>
+                    <td></td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/44.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>45</td>
+                    <td>Request for Nomination of suitable Personnel of TMA for Joint Oversight of Urban/Green Spaces Project</td>
+                    <td>4977/TMA</td>
+                    <td>TMO TMA ATD</td>
+                    <td>CEO WSSCA</td>
+                    <td>21-Jul-23</td>
+                    <td></td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/45.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>46</td>
+                    <td>Non-Compliance with Sub-Clause 8.3 (Programme)</td>
+                    <td>KPCIP/PMCSC/RE/ATD/Lot-1/107</td>
+                    <td>RE (Green & Urban Spaces)</td>
+                    <td>P.M JHK</td>
+                    <td>27-Jul-23</td>
+                    <td>02-Aug-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/46.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>47</td>
+                    <td>Submission of Price Adjustment No.01</td>
+                    <td>KPCIP/DT/UGS/ATD/2023-24/519-523</td>
+                    <td>WATSAN Specialist</td>
+                    <td>CEO WSSCA</td>
+                    <td>31-Jul-23</td>
+                    <td>02-Aug-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/47.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>48</td>
+                    <td>Bunching of electrical cables in Bazar</td>
+                    <td>KPCIP/PMCSC/RE/ATD/Lot-1/108</td>
+                    <td>RE (Green & Urban Spaces)</td>
+                    <td>CEO WSSCA</td>
+                    <td>31-Jul-23</td>
+                    <td>02-Aug-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/48.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>49</td>
+                    <td>Suspension of Work Without Prior Notice</td>
+                    <td>KPCIP/PMCSC/RE/ATD/Lot-1/110</td>
+                    <td>RE (Green & Urban Spaces)</td>
+                    <td>P.M JHK</td>
+                    <td>08-Aug-23</td>
+                    <td>10-Aug-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/49.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>50</td>
+                    <td>Slow Progress Of Work and its Implication under the Condition of Contract</td>
+                    <td>KPCIP/PMCSC/RE/ATD/Lot-1/113</td>
+                    <td>RE (Green & Urban Spaces)</td>
+                    <td>P.D KPCIP</td>
+                    <td>29-Aug-23</td>
+                    <td></td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/50.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>51</td>
+                    <td>Rate of Progress Pursuant to Sub-Clause 8.6 of GCC/PCC</td>
+                    <td>KPCIP/PMCSC/RE/ATD/Lot-1/114</td>
+                    <td>RE (Green & Urban Spaces)</td>
+                    <td>P.M JHK</td>
+                    <td>19-Sep-23</td>
+                    <td></td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/51.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>52</td>
+                    <td>Submission of Recovery Working Schedule Under Sub-Clause 8.3 of GCC/PCC</td>
+                    <td>KPCIP/PMCSC/RE/ATD/Lot-1/115</td>
+                    <td>RE (Green & Urban Spaces)</td>
+                    <td>P.M JHK</td>
+                    <td>28-Sep-23</td>
+                    <td></td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/52.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>53</td>
+                    <td>Response to notice under Sub -Clause 20.1 of Contract (To be read in conjunction with sub Clause 1.9, 2.1 & 8.4 of COC)</td>
+                    <td>KPCIP/PMCSC/RE/ATD/Lot-1/116</td>
+                    <td>RE (Green & Urban Spaces)</td>
+                    <td>P.M JHK</td>
+                    <td>04-Oct-23</td>
+                    <td>06-Oct-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/53.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>54</td>
+                    <td>Additional/Alternate Route to Redress the Grievance of the Vicinal Community</td>
+                    <td>KPCIP/PMCSC/RE/ATD/Lot-1/119</td>
+                    <td>RE (Green & Urban Spaces)</td>
+                    <td>P.D KPCIP</td>
+                    <td>09-Oct-23</td>
+                    <td></td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/54.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>55</td>
+                    <td>Typical Construction Drawing of Public Washroom for Women in Old City Center Abbottabad</td>
+                    <td>KPCIP/PMCSC/RE/ATD/Lot-1/118</td>
+                    <td>RE (Green & Urban Spaces)</td>
+                    <td>P.M JHK</td>
+                    <td>09-Oct-23</td>
+                    <td>10-Oct-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/55.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>56</td>
+                    <td>Typical Construction Drawing of Toilet Block-B in Sherwan Family Adventure Park</td>
+                    <td>KPCIP/PMCSC/RE/ATD/Lot-1/117</td>
+                    <td>RE (Green & Urban Spaces)</td>
+                    <td>P.M JHK</td>
+                    <td>09-Oct-23</td>
+                    <td>10-Oct-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/56.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>57</td>
+                    <td>Typical Construction Drawing of Tuck Shop in Sherwan Family Adventure Park</td>
+                    <td>KPCIP/PMCSC/RE/ATD/Lot-1/121</td>
+                    <td>RE (Green & Urban Spaces)</td>
+                    <td>P.M JHK</td>
+                    <td>10-Oct-23</td>
+                    <td>11-Oct-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/57.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>58</td>
+                    <td>Bunching of electrical cables in Bazar</td>
+                    <td>KPCIP/PMCSC/RE/ATD/Lot-1/120</td>
+                    <td>RE (Green & Urban Spaces)</td>
+                    <td>CEO WSSCA</td>
+                    <td>10-Oct-23</td>
+                    <td></td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/58.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>59</td>
+                    <td>Proposed Electric Meter Panel Foundation</td>
+                    <td>KPCIP/PMCSC/RE/ATD/Lot-1/125</td>
+                    <td>RE (Green & Urban Spaces)</td>
+                    <td>CEO WSSCA</td>
+                    <td>18-Oct-23</td>
+                    <td></td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/59.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>60</td>
+                    <td>Providing & Fixing of Awning & Signage</td>
+                    <td>KPCIP/PMCSC/RE/ATD/Lot-1/124</td>
+                    <td>P.M JHK</td>
+                    <td>RE (Green & Urban Spaces)</td>
+                    <td>18-Oct-23</td>
+                    <td></td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/60.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+   <!-- PDF.js viewer container -->
+   <div id="pdfViewerContainer" style="display: none;">
+    <div id="pdfViewer"></div>
+</div>
+
+<!-- PDF.js library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.js"></script>
+
+<script>
+    // Add JavaScript code for filtering documents and viewing PDF files
+    const searchInput = document.getElementById('searchInput');
+    const lettersTableContainer = document.getElementById('lettersTableContainer');
+    const documentTable = document.getElementById('documentTable');
+    const rows = documentTable.getElementsByTagName('tr');
+    const pdfViewerContainer = document.getElementById('pdfViewerContainer');
+    const pdfViewer = document.getElementById('pdfViewer');
+
+    searchInput.addEventListener('keyup', () => {
+        const searchText = searchInput.value.toLowerCase();
+
+        for (let i = 1; i < rows.length; i++) {
+            const cells = rows[i].getElementsByTagName('td');
+            let found = false;
+
+            for (let j = 0; j < cells.length - 1; j++) {
+                const cellText = cells[j].textContent.toLowerCase();
+
+                if (cellText.includes(searchText)) {
+                    found = true;
+                    break;
+                }
+            }
+
+            if (found) {
+                rows[i].style.display = '';
+            } else {
+                rows[i].style.display = 'none';
+            }
+        }
+    });
+
+    function viewFile(pdfFile) {
+        PDFJS.getDocument(pdfFile).then((pdfDoc) => {
+            pdfViewerContainer.style.display = 'block';
+
+            for (let i = 1; i <= pdfDoc.numPages; i++) {
+                pdfDoc.getPage(i).then((page) => {
+                    const canvas = document.createElement('canvas');
+                    pdfViewer.appendChild(canvas);
+                    page.render({ canvas, viewport: page.getViewport({ scale: 1.0 }) });
+                });
+            }
+        });
+    }
+
+    function loadSubProject(subProjectName) {
+        // Show the container when "Incoming Letters" is clicked
+        lettersTableContainer.style.display = 'block';
+    }
+</script>
+</body>
+</html>

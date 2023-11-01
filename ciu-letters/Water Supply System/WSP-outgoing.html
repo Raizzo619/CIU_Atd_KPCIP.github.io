@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSS Outgoing Letters</title>
+    <style>
+        /* Add your custom CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        input[type="text"] {
+            width: 98.5%;
+            padding: 10px;
+            margin: 10px auto;
+        }
+
+        .view-button {
+            background-color: #0074d9;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .download-button {
+            background-color: #2ecc40;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .main-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .main-button {
+            background-color: #555;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        /* Display: none for sub-buttons and table container */
+        .sub-button, #lettersTableContainer {
+            display: none;
+        }
+        h1 {
+            background-color: #0074d9; /* Background color (you can change this to your preferred color) */
+            color: #fff; /* Text color */
+            padding: 10px 20px; /* Padding for the text inside the heading */
+            border: 2px solid #0056b3; /* Border around the heading */
+            border-radius: 5px; /* Rounded corners for the heading */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Water Supply System Outgoing Letters</h1>
+    <div class="main-buttons">
+        <button class="main-button" onclick="loadSubProject('incoming')">Water Supply System Outgoing Letters</button>
+    </div>
+
+    <input type="text" id="searchInput" placeholder="Search documents...">
+
+    <!-- Add a container div to wrap the table and set its initial display to none -->
+    <div id="lettersTableContainer">
+        <table id="documentTable">
+            <thead>
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Subject</th>
+                    <th>Reference</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Date</th>
+                    <th>Receiving Date</th>
+                    <th>Source File</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Request for issuance of umbrella NOC for laying/installation of main water supply line.</td>
+                    <td>CEO/WSSCA/023/8056</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>Director General GDA</td>
+                    <td>25-Jan-23</td>
+                    <td>26-Jan-23</td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/1.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Extension of jica gravity water supply scheme Abbotabad Water supply pipe line distribution network contradiction in the designed drawing and on ground position at outlet pipe of WTP.</td>
+                    <td>CEO/WSSCA/023/8526</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>RE (Water Supply)</td>
+                    <td>15-May-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/2.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Request for Umbrella NOC in respect of execution of mentioned sub-projects under KPCIP projects.- Provisional payment of OFC required for processing of NOC.</td>
+                    <td>CEO/WSSCA/023/8525</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>Project Director (PMU)</td>
+                    <td>15-May-23</td>
+                    <td>15-May-23</td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/3.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Requirements of funds for payment of land compensation in water supply project under KPCIP.</td>
+                    <td>CEO/WSSCA/023/8550</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>Project Director (PMU)</td>
+                    <td>24-May-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/4.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Extension of jica gravity water supply scheme Land Acquisition for water supply line-acknowledgement required for 2200m long water supply route from jandar baari to phalkot mosque.</td>
+                    <td>CEO/WSSCA/023/8609</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>RE (Water Supply)</td>
+                    <td>06-Jun-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/5.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Extension of jica gravity water supply scheme Abbotabad Water supply distribution network contradiction - test pits at KKH-N35</td>
+                    <td>CEO/WSSCA/023/8608</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>RE (Water Supply)</td>
+                    <td>06-Jun-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/6.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Extension of jica gravity water supply scheme Abbotabad provisional layout of the pipeline passing along the C&W roads.</td>
+                    <td>CEO/WSSCA/023/8610</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>RE (Water Supply)</td>
+                    <td>06-Jun-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/7.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>Extension of jica gravity water supply scheme Abbotabad Land Acquisition for water supply line- hurdles in the pipe line route at outlet (Choona WTP).</td>
+                    <td>CEO/WSSCA/023/8607</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>RE (Water Supply)</td>
+                    <td>07-Jun-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/8.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>Information - NOC fee deposit in prescribed bank account - NHA islamabad.</td>
+                    <td>CEO/WSSCA/023/8633</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>Deputy Director (maintenance) NHA</td>
+                    <td>09-Jun-23</td>
+                    <td>12-Jun-23</td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/9.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>Unavoidable Issue in land acquisition from jandar baari to phalkot Mosque shifting of 2200 meters pipeline route towards moza maalsa side.</td>
+                    <td>CEO/WSSCA/023/8639</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>RE (Water Supply)</td>
+                    <td>12-Jun-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/10.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>Water supply distribution network shifting of water reservoirs location.</td>
+                    <td>CEO/WSSCA/023/8640</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>RE (Water Supply)</td>
+                    <td>12-Jun-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/11.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
+                    <td>Request for issuance of NOC in respect of execution of sub-projects under Khyber Pakhtunkhwa City Improvement Project (KPCIP).</td>
+                    <td>CEO/WSSCA/023/8665</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>Deputy Director (maint) NHA</td>
+                    <td>16-Jun-23</td>
+                    <td>19-Jun-23</td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/12.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>13</td>
+                    <td>Extension of jica gravity water supply scheme Abbotabad shifting of water reservoirs location.</td>
+                    <td>CEO/WSSCA/023/8789</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>RE (Water Supply)</td>
+                    <td>27-Jun-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/13.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>14</td>
+                    <td>Extension of jica gravity water supply scheme Abbotabad provisional layout at N35 section.</td>
+                    <td>CEO/WSSCA/023/8823</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>RE (Water Supply)</td>
+                    <td>10-Jul-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/14.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>15</td>
+                    <td>Extension of jica gravity water supply scheme Abbotabad Re: approval of option 2 main distribution pipe route.</td>
+                    <td>CEO/WSSCA/023/9083</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>RE (Water Supply)</td>
+                    <td>16-Aug-23</td>
+                    <td>17-Aug-23</td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/15.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>16</td>
+                    <td>Request for approval of carrying out test pits at specified locations.</td>
+                    <td>CEO/WSSCA/023/9082</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>Deputy Director (maintenance) NHA</td>
+                    <td>16-Aug-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/16.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>17</td>
+                    <td>Note for records meeting with superintendent engineer PHED - Abbottabad.</td>
+                    <td>CEO/WSSCA/023/9105</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>RE (Water Supply)</td>
+                    <td>23-Aug-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/17.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>18</td>
+                    <td>Shifting and storing of PHED assets from Choona WTP site to identified neighborhood locations.</td>
+                    <td>CEO/WSSCA/023/9224</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>RE (Water Supply)</td>
+                    <td>19-Sep-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/18.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>19</td>
+                    <td>Request for NOC for proposed tank no 8, Shimla/Nullah tank (100,000 gallons) - UC Malakpura.</td>
+                    <td>CEO/WSSCA/023/8981</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>Tehsil Municipal Officer</td>
+                    <td>20-Sep-23</td>
+                    <td>24-Jul-23</td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/19.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>20</td>
+                    <td>CW_02-LOT 1 (Abbottabad) - suggestion to pause the commencement.</td>
+                    <td>CEO/WSSCA/023/9254</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>Director Technical KPCIP-PMU</td>
+                    <td>20-Sep-23</td>
+                    <td>28-Sep-23</td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/20.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>21</td>
+                    <td>Proposed Flexible Route for less engaging KKH/NHA in Water Supply Networking</td>
+                    <td>CEO/WSSCA/023/9116</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>RE (Water Supply)</td>
+                    <td>25-Aug-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/21.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>22</td>
+                    <td>Cutting of trees from the construction site of WTP without securing NOC from the forest department.</td>
+                    <td>CEO/WSSCA/023/9249</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>Project Director (PMU)</td>
+                    <td>28-Sep-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/22.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>23</td>
+                    <td>Re-handling & taking over of cut trees at the water treatment plant.</td>
+                    <td>CEO/WSSCA/023/9262</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>RE (Water Supply)</td>
+                    <td>28-Sep-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/23.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>24</td>
+                    <td>Comments matrix sheet - Chuna WTP.</td>
+                    <td>CEO/WSSCA/023/9235</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>RE (Water Supply)</td>
+                    <td>28-Sep-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/24.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>25</td>
+                    <td>Request to attend the meeting regarding reservations on KPCIP WTP - Abbottabad.</td>
+                    <td>CEO/WSSCA/023/9273</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>Executive Engineer (Bulk Division) PHED</td>
+                    <td>03-Oct-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/25.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>26</td>
+                    <td>Reminder - response Awaited Comments matrix sheet.</td>
+                    <td>CEO/WSSCA/023/9284</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>RE (Water Supply)</td>
+                    <td>05-Oct-23</td>
+                    <td>10-Oct-23</td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/26.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>27</td>
+                    <td>Note for records -- Field visit of PMCSC design team to qualify the transmission line.</td>
+                    <td>CEO/WSSCA/023/9283</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>RE (Water Supply)</td>
+                    <td>09-Oct-23</td>
+                    <td>10-Oct-23</td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/27.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>28</td>
+                    <td>Follow up - Awaited review and feedback for notified issues. Cw-02 lot 01.</td>
+                    <td>CEO/WSSCA/023/9255</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>RE (Water Supply)</td>
+                    <td>10-Oct-23</td>
+                    <td>04-Oct-23</td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/28.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>29</td>
+                    <td>Follow up - Awaited review and feedback for notified issues WTP Outlet trick.</td>
+                    <td>CEO/WSSCA/023/9256</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>RE (Water Supply)</td>
+                    <td>12-Oct-23</td>
+                    <td>04-Oct-23</td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/29.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>30</td>
+                    <td>Technical section of the project (CW-02 LOT-01).</td>
+                    <td>CEO/WSSCA/023/9297</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>Project Director (PMU)</td>
+                    <td>12-Oct-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/30.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>31</td>
+                    <td>Technical section of the project (CW-02 LOT-02).</td>
+                    <td>CEO/WSSCA/023/9296</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>Project Director (PMU)</td>
+                    <td>12-Oct-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/31.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>32</td>
+                    <td>Minutes of coordination meeting held in WSSCA OFFICE ON 10-10-2023.</td>
+                    <td>CEO/WSSCA/023/9296 A</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>Superintendent Engineer PHED</td>
+                    <td>12-Oct-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/32.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>33</td>
+                    <td>Using of PHED premises as an entryway for distribution chamber (Raw water inlet).</td>
+                    <td>CEO/WSSCA/023/9316</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>RE (Water Supply)</td>
+                    <td>18-Oct-23</td>
+                    <td>19-Oct-23</td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/33.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>34</td>
+                    <td>Re 2. Intimation of the competent Authority for Handling / taking over the trees.</td>
+                    <td>CEO/WSSCA/023/9318</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>RE (Water Supply)</td>
+                    <td>18-Oct-23</td>
+                    <td>20-Oct-23</td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/34.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>35</td>
+                    <td>RE - Design finalization: location of intake structure for JICA water supply extension scheme</td>
+                    <td>CEO/WSSCA/023/9339</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>Project Director (PMU)</td>
+                    <td>23-Oct-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/35.pdf" download>View & Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>36</td>
+                    <td>Re-handling & taking over of PHED Assets Present in KPCIP-WTP site</td>
+                    <td>CEO/WSSCA/023/9268</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>Executive Engineer (Bulk Division) PHED</td>
+                    <td>05-Oct-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/36.pdf" download>View & Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>37</td>
+                    <td>KPCIP Abbottabad</td>
+                    <td>CEO/WSSCA/023/9269</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>Executive Engineer (Bulk Division) PHED</td>
+                    <td>05-Oct-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/37.pdf" download>View & Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>38</td>
+                    <td>Restoration of the access road after completion of KPCIP-WTP</td>
+                    <td>CEO/WSSCA/023/9271</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>RE (Water Supply)</td>
+                    <td>05-Oct-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Outgoing-Letters/38.pdf" download>View & Download File</a>
+                    </td>
+                  </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+   <!-- PDF.js viewer container -->
+   <div id="pdfViewerContainer" style="display: none;">
+    <div id="pdfViewer"></div>
+</div>
+
+<!-- PDF.js library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.js"></script>
+
+<script>
+    // Add JavaScript code for filtering documents and viewing PDF files
+    const searchInput = document.getElementById('searchInput');
+    const lettersTableContainer = document.getElementById('lettersTableContainer');
+    const documentTable = document.getElementById('documentTable');
+    const rows = documentTable.getElementsByTagName('tr');
+    const pdfViewerContainer = document.getElementById('pdfViewerContainer');
+    const pdfViewer = document.getElementById('pdfViewer');
+
+    searchInput.addEventListener('keyup', () => {
+        const searchText = searchInput.value.toLowerCase();
+
+        for (let i = 1; i < rows.length; i++) {
+            const cells = rows[i].getElementsByTagName('td');
+            let found = false;
+
+            for (let j = 0; j < cells.length - 1; j++) {
+                const cellText = cells[j].textContent.toLowerCase();
+
+                if (cellText.includes(searchText)) {
+                    found = true;
+                    break;
+                }
+            }
+
+            if (found) {
+                rows[i].style.display = '';
+            } else {
+                rows[i].style.display = 'none';
+            }
+        }
+    });
+
+    function viewFile(pdfFile) {
+        PDFJS.getDocument(pdfFile).then((pdfDoc) => {
+            pdfViewerContainer.style.display = 'block';
+
+            for (let i = 1; i <= pdfDoc.numPages; i++) {
+                pdfDoc.getPage(i).then((page) => {
+                    const canvas = document.createElement('canvas');
+                    pdfViewer.appendChild(canvas);
+                    page.render({ canvas, viewport: page.getViewport({ scale: 1.0 }) });
+                });
+            }
+        });
+    }
+
+    function loadSubProject(subProjectName) {
+        // Show the container when "Incoming Letters" is clicked
+        lettersTableContainer.style.display = 'block';
+    }
+</script>
+</body>
+</html>

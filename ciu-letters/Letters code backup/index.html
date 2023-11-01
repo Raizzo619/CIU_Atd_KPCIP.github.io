@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIU Letters</title>
+    <style>
+        /* Add your custom CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        input[type="text"] {
+            width: 98.5%;
+            padding: 10px;
+            margin: 10px auto;
+        }
+
+        .view-button {
+            background-color: #0074d9;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .download-button {
+            background-color: #2ecc40;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .main-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .main-button {
+            background-color: #555;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+            width: 32%; /* Equal width for all three buttons */
+            box-sizing: border-box;
+        }
+
+        /* Equal width for "INCOMING" and "OUTGOING" buttons */
+        .sub-button {
+            background-color: #555;
+            color: white;
+            width: 47.8%; /* 48% to allow for a small margin between buttons */
+            margin: 1%; /* 1% margin between buttons */
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CIU Letters</h1>
+    <div class="main-buttons">
+        <button class="main-button" onclick="loadProject('project1')">WATER SUPPLY SYSTEM</button>
+        <button class="main-button" onclick="loadProject('project2')">PEDESTRIANISATION OF OLD CITY</button>
+        <button class="main-button" onclick="loadProject('project3')">SHERWAN ADVENTURE PARK</button>
+    </div>
+
+    <!-- Add two more buttons for "WATER SUPPLY SYSTEM" -->
+    <div id="waterSupplyButtons" style="display: none;">
+        <button class="sub-button" onclick="loadSubProject('incoming')">INCOMING LETTERS</button>
+        <button class="sub-button" onclick="loadSubProject('outgoing')">OUTGOING LETTERS</button>
+    </div>
+    <!-- Add two more buttons for "Pedestrianisation Of Old City" -->
+    <div id="pedestrianisationButtons" style="display: none;">
+        <button class="sub-button" onclick="loadPedestrianisationSubProject('incoming')">INCOMING LETTERS</button>
+        <button class="sub-button" onclick="loadPedestrianisationSubProject('outgoing')">OUTGOING LETTERS</button>
+    </div>
+    <!-- Add two more buttons for "Sherwan Adventure Park" -->
+    <div id="sherwanAdventureButtons" style="display: none;">
+        <button class="sub-button" onclick="loadSherwanAdventureSubProject('incoming')">INCOMING LETTERS</button>
+        <button class="sub-button" onclick="loadSherwanAdventureSubProject('outgoing')">OUTGOING LETTERS</button>
+    </div>
+    <input type="text" id="searchInput" placeholder="Search documents...">
+
+    <!-- Add a container div to wrap the table and set its initial display to none -->
+    <div id="lettersTableContainer" style="display: none;">
+        <table id="documentTable">
+            <thead>
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Subject</th>
+                    <th>Reference</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Date</th>
+                    <th>Receiving Date</th>
+                    <th>Source File</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Request for Umbrella NOC in respect of execution of mentioned sub-projects under KPCIP projects.</td>
+                    <td>DD(Maint) /NHA/ATD/2022/190</td>
+                    <td>Ameer khan Dy.Director (Maint) NHA Abbottabad</td>
+                    <td>Chief Executive Officer WASSCA</td>
+                    <td>05-Aug-22</td>
+                    <td>11-Aug-22</td>
+                    <td>
+                        <a class="download-button" href="WTP-Incoiming/1.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Request for Umbrella NOC in respect of execution of mentioned sub-projects under KPCIP LGE & RDD.</td>
+                    <td>KPCIP/DT/MISC/2022-23/ 785-791</td>
+                    <td>Alamgir Afridi Water supply and Sanitation Specialist</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>24-Aug-22</td>
+                    <td>26-Aug-22</td>
+                    <td>
+                        <a class="download-button" href="WTP-Incoiming/2.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>NOC's Updates status of the projects under KPCIP LGE&RDD.</td>
+                    <td>KPCIP/DT/MISC/2022-23/ 1125-1127</td>
+                    <td>Alamgir Afridi Water supply and Sanitation Specialist</td>
+                    <td>Chief Executive Officer WASSCA</td>
+                    <td>20-Sep-22</td>
+                    <td>21-Sep-22</td>
+                    <td>
+                        <a class="download-button" href="WTP-Incoiming/3.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Request for Issuance of Umbrella NOC in respect of execution of sub-projects under KPCIP.</td>
+                    <td>DD(Maint) /NHA/ATD/2023/417</td>
+                    <td>Ameer khan Dy.Director (Maint) NHA Abbottabad</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>13-Jun-23</td>
+                    <td></td> <!-- Add receiving date if available -->
+                    <td>
+                        <a class="download-button" href="WTP-Incoiming/4.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Shifting of Water Resorviors Locations.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-1/004</td>
+                    <td>RE (Water Supply)</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>24-Jun-23</td>
+                    <td></td> <!-- Add receiving date if available -->
+                    <td>
+                        <a class="download-button" href="WTP-Incoiming/5.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Notice for commencement of works under sub-clause 8.1 of GCC/PCC.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-1/005</td>
+                    <td>RE (Water Supply)</td>
+                    <td>M/S Zahir khan & brothers (ZKB)</td>
+                    <td>27-Jul-23</td>
+                    <td>04-Aug-23</td>
+                    <td>
+                        <a class="download-button" href="WTP-Incoiming/6.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Submission of contractor's representative in accordance with sub-clause 4.3 of GCC/PCC.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/006</td>
+                    <td>RE (Water Supply)</td>
+                    <td>M/S Zahir khan & brothers (ZKB)</td>
+                    <td>31-Jul-23</td>
+                    <td>04-Aug-23</td>
+                    <td>
+                        <a class="download-button" href="WTP-Incoiming/7.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Submission pf (SSEMP) & (SSHSMP) IN Accordance with sub-clause 4.18 & 6.7 of GCC/PCC.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/007</td>
+                    <td>RE (Water Supply)</td>
+                    <td>PM Zahir khan & brothers (ZKB)</td>
+                    <td>02-Aug-23</td>
+                    <td>04-Aug-23</td>
+                    <td>
+                        <a class="download-button" href="WTP-Incoiming/8.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Submission of detailed time programme/working schedule in accordance with sub clause 8.3 of GCC/PCC.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/008</td>
+                    <td>RE (Water Supply)</td>
+                    <td>PM Zahir khan & brothers (ZKB)</td>
+                    <td>02-Aug-23</td>
+                    <td>04-Aug-23</td>
+                    <td>
+                        <a class="download-button" href="WTP-Incoiming/9.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Submission of records apropas contractor's personnel and equipment in accordance with sub clause 5.9 and 5.10 of GCC/PCC.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/009</td>
+                    <td>RE (Water Supply)</td>
+                    <td>PM Zahir khan & brothers (ZKB)</td>
+                    <td>02-Aug-23</td>
+                    <td>04-Aug-23</td>
+                    <td>
+                        <a class="download-button" href="WTP-Incoiming/10.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Issuance of contruction drawing for water treatement plant.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/011</td>
+                    <td>RE (Water Supply)</td>
+                    <td>PM Zahir khan & brothers (ZKB)</td>
+                    <td>05-Aug-23</td>
+                    <td>10-Aug-23</td>
+                    <td>
+                        <a class="download-button" href="WTP-Incoiming/11.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Minutes of meeting Dated 03-08-2023</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/012</td>
+                    <td>RE (Water Supply)</td>
+                    <td>PM Zahir khan & brothers (ZKB)</td>
+                    <td>08-Aug-23</td>
+                    <td>10-Aug-23</td>
+                    <td>
+                        <a class="download-button" href="WTP-Incoiming/12.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Impediments in carrying out construction activities in WTP area.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/016</td>
+                    <td>RE (Water Supply)</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>25-Aug-23</td>
+                    <td>28-Aug-23</td>
+                    <td>
+                        <a class="download-button" href="WTP-Incoiming/13.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Request for disassemble of pre-cast boundry wall (40 feet) installed bh PHE at the approach of access road to WTP.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/015</td>
+                    <td>RE (Water Supply)</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>26-Aug-23</td>
+                    <td>28-Aug-23</td>
+                    <td>
+                        <a class="download-button" href="WTP-Incoiming/14.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Submission of IFC drawings.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/014</td>
+                    <td>RE (Water Supply)</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>26-Aug-23</td>
+                    <td>15-Sep-23</td>
+                    <td>
+                        <a class="download-button" href="WTP-Incoiming/15.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Submission of insurance polities as per the contract clause GCC/PCC 18 of the contract.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/027</td>
+                    <td>RE (Water Supply)</td>
+                    <td>Project Director (PMU).</td>
+                    <td>16-Sep-23</td>
+                    <td></td> <!-- Add receiving date if available -->
+                    <td>
+                        <a class="download-button" href="WTP-Incoiming/16.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Shifting and storingof PHED assets from chuna WTP site to identified neighborhood location.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/030</td>
+                    <td>RE (Water Supply)</td>
+                    <td>PM Zahir khan & brothers (ZKB)</td>
+                    <td>25-Sep-23</td>
+                    <td></td> <!-- Add receiving date if available -->
+                    <td>
+                        <a class="download-button" href="WTP-Incoiming/17.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- PDF.js viewer container -->
+    <div id="pdfViewerContainer" style="display: none;">
+        <div id="pdfViewer"></div>
+    </div>
+
+    <!-- PDF.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.js"></script>
+
+    <script>
+        // Add JavaScript code for filtering documents and viewing PDF files
+        const searchInput = document.getElementById('searchInput');
+        const lettersTableContainer = document.getElementById('lettersTableContainer'); // New container
+        const documentTable = document.getElementById('documentTable');
+        const rows = documentTable.getElementsByTagName('tr');
+        const pdfViewerContainer = document.getElementById('pdfViewerContainer');
+        const pdfViewer = document.getElementById('pdfViewer');
+
+        searchInput.addEventListener('keyup', () => {
+            const searchText = searchInput.value.toLowerCase();
+
+            for (let i = 1; i < rows.length; i++) {
+                const cells = rows[i].getElementsByTagName('td');
+                let found = false;
+
+                for (let j = 0; j < cells.length - 1; j++) {
+                    const cellText = cells[j].textContent.toLowerCase();
+
+                    if (cellText.includes(searchText)) {
+                        found = true;
+                        break;
+                    }
+                }
+
+                if (found) {
+                    rows[i].style.display = '';
+                } else {
+                    rows[i].style.display = 'none';
+                }
+            }
+        });
+
+        function viewFile(pdfFile) {
+            PDFJS.getDocument(pdfFile).then((pdfDoc) => {
+                pdfViewerContainer.style.display = 'block';
+
+                for (let i = 1; i <= pdfDoc.numPages; i++) {
+                    pdfDoc.getPage(i).then((page) => {
+                        const canvas = document.createElement('canvas');
+                        pdfViewer.appendChild(canvas);
+                        page.render({ canvas, viewport: page.getViewport({ scale: 1.0 }) });
+                    });
+                }
+            });
+        }
+
+        function loadProject(projectName) {
+            if (projectName === 'project1') {
+                document.getElementById('waterSupplyButtons').style.display = 'block';
+                document.getElementById('pedestrianisationButtons').style.display = 'none';
+                document.getElementById('sherwanAdventureButtons').style.display = 'none';
+                // Hide the container initially
+                lettersTableContainer.style.display = 'none';
+            } else if (projectName === 'project2') {
+                document.getElementById('waterSupplyButtons').style.display = 'none';
+                document.getElementById('pedestrianisationButtons').style.display = 'block';
+                document.getElementById('sherwanAdventureButtons').style.display = 'none';
+            } else if (projectName === 'project3') {
+                document.getElementById('waterSupplyButtons').style.display = 'none';
+                document.getElementById('pedestrianisationButtons').style.display = 'none';
+                document.getElementById('sherwanAdventureButtons').style.display = 'block';
+            }
+        }
+
+        function loadSubProject(subProjectName) {
+            // Handle sub-project button clicks here
+            if (subProjectName === 'incoming') {
+                // Show the container when INCOMING is clicked
+                lettersTableContainer.style.display = 'block';
+            } else {
+                // Hide the container for other sub-projects
+                lettersTableContainer.style.display = 'none';
+            }
+        }
+
+        // Handle "Pedestrianisation Of Old City" sub-projects
+        function loadPedestrianisationSubProject(subProjectName) {
+            // Handle sub-project button clicks here
+            console.log(`Clicked on "Pedestrianisation Of Old City" - ${subProjectName}`);
+        }
+
+        // Handle "Sherwan Adventure Park" sub-projects
+        function loadSherwanAdventureSubProject(subProjectName) {
+            // Handle sub-project button clicks here
+            console.log(`Clicked on "Sherwan Adventure Park" - ${subProjectName}`);
+        }
+    </script>
+</body>
+</html>

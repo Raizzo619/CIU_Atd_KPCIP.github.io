@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CIU Letters</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+            padding: 10px;
+            background-color: #222;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            height: 70vh;
+            width: 100%;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .panel {
+            flex: 0 1 calc(25% - 5px); /* Increase panel width and reduce space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #4e5051;
+            color: #fff;
+            text-align: center;
+            border-right: 1px solid #fff;
+            height: 70vh;
+            width: 100%;
+        }
+
+        .panel:last-child {
+            border-right: none;
+        }
+
+        h1 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+        /* Style for the title and paragraph div */
+        .content-div {
+            background-color: #4e5051;
+            border: 2px solid #fff;
+            padding: 10px;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        /* Style for the buttons */
+        .button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content-div">
+        <h1>KP-CIP CIU ABBOTTABAD LETTERS</h1>
+        <p>On this page, you will find all Incoming and outgoing letters of Water Supply System and Green & Urban Spaces Initiative.</p>
+    </div>
+    <div class="container">
+        <div class="panel">
+            <h1>Water Supply System <br>Incoming Letters</h1>
+            <p>For Letter details, Click Below.</p>
+            <a class="button" href="Water Supply System/WSP-incoming.html">View Details</a>
+        </div>
+        <div class="panel">
+            <h1>Water Supply System <br>Outgoing Letters</h1>
+            <p>For Letter details, Click Below.</p>
+            <a class="button" href="Water Supply System/WSP-outgoing.html">View Details</a>
+        </div>
+
+        <div class="panel">
+            <h1>Green & Urban Spaces Incoming Letters</h1>
+            <p>For Letter details, Click Below.</p>
+            <a class="button" href="Green and Urban Spaces/GUS-incoming.html">View Details</a>
+        </div>
+        <div class="panel">
+            <h1>Green & Urban Spaces Outgoing Letters</h1>
+            <p>For Letter details, Click Below.</p>
+            <a class="button" href="Green and Urban Spaces/GUS-Outgoing.html">View Details</a>
+        </div>
+</body>
+</html>

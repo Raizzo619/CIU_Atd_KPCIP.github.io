@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSS Incoming Letters</title>
+    <style>
+        /* Add your custom CSS styles here */
+        body {
+            font-family: Arial, sans-serif;font-size: medium;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        input[type="text"] {
+            width: 98.5%;
+            padding: 10px;
+            margin: 10px auto;
+        }
+
+        .view-button {
+            background-color: #0074d9;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .download-button {
+            background-color: #2ecc40;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .main-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .main-button {
+            background-color: #555;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        /* Display: none for sub-buttons and table container */
+        .sub-button, #lettersTableContainer {
+            display: none;
+        }
+        h1 {
+            background-color: #0074d9; /* Background color (you can change this to your preferred color) */
+            color: #fff; /* Text color */
+            padding: 10px 20px; /* Padding for the text inside the heading */
+            border: 2px solid #0056b3; /* Border around the heading */
+            border-radius: 5px; /* Rounded corners for the heading */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Water Supply System Incoming Letters</h1>
+    <div class="main-buttons">
+        <button class="main-button" onclick="loadSubProject('incoming')">Water Supply System Incoming Letters</button>
+    </div>
+
+    <input type="text" id="searchInput" placeholder="Search documents...">
+
+    <!-- Add a container div to wrap the table and set its initial display to none -->
+    <div id="lettersTableContainer">
+        <table id="documentTable">
+            <thead>
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Subject</th>
+                    <th>Reference</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Date</th>
+                    <th>Receiving Date</th>
+                    <th>Source File</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Request for Umbrella NOC in respect of execution of mentioned sub-projects under KPCIP projects.</td>
+                    <td>DD(Maint) /NHA/ATD/2022/190</td>
+                    <td>Ameer khan Dy.Director (Maint) NHA Abbottabad</td>
+                    <td>Chief Executive Officer WASSCA</td>
+                    <td>05-Aug-22</td>
+                    <td>11-Aug-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/1.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Request for Umbrella NOC in respect of execution of mentioned sub-projects under KPCIP LGE & RDD.</td>
+                    <td>KPCIP/DT/MISC/2022-23/ 785-791</td>
+                    <td>Alamgir Afridi Water supply and Sanitation Specialist</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>24-Aug-22</td>
+                    <td>26-Aug-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/2.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>NOC's Updates status of the projects under KPCIP LGE&RDD.</td>
+                    <td>KPCIP/DT/MISC/2022-23/ 1125-1127</td>
+                    <td>Alamgir Afridi Water supply and Sanitation Specialist</td>
+                    <td>Chief Executive Officer WASSCA</td>
+                    <td>20-Sep-22</td>
+                    <td>21-Sep-22</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/3.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Request for Issuance of Umbrella NOC in respect of execution of sub-projects under KPCIP.</td>
+                    <td>DD(Maint) /NHA/ATD/2023/417</td>
+                    <td>Ameer khan Dy.Director (Maint) NHA Abbottabad</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>13-Jun-23</td>
+                    <td></td> <!-- Add receiving date if available -->
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/4.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Shifting of Water Resorviors Locations.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-1/004</td>
+                    <td>RE (Water Supply)</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>24-Jun-23</td>
+                    <td></td> <!-- Add receiving date if available -->
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/5.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Notice for commencement of works under sub-clause 8.1 of GCC/PCC.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-1/005</td>
+                    <td>RE (Water Supply)</td>
+                    <td>M/S Zahir khan & brothers (ZKB)</td>
+                    <td>27-Jul-23</td>
+                    <td>04-Aug-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/6.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Submission of contractor's representative in accordance with sub-clause 4.3 of GCC/PCC.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/006</td>
+                    <td>RE (Water Supply)</td>
+                    <td>M/S Zahir khan & brothers (ZKB)</td>
+                    <td>31-Jul-23</td>
+                    <td>04-Aug-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/7.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Submission pf (SSEMP) & (SSHSMP) IN Accordance with sub-clause 4.18 & 6.7 of GCC/PCC.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/007</td>
+                    <td>RE (Water Supply)</td>
+                    <td>PM Zahir khan & brothers (ZKB)</td>
+                    <td>02-Aug-23</td>
+                    <td>04-Aug-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/8.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Submission of detailed time programme/working schedule in accordance with sub clause 8.3 of GCC/PCC.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/008</td>
+                    <td>RE (Water Supply)</td>
+                    <td>PM Zahir khan & brothers (ZKB)</td>
+                    <td>02-Aug-23</td>
+                    <td>04-Aug-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/9.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Submission of records apropas contractor's personnel and equipment in accordance with sub clause 5.9 and 5.10 of GCC/PCC.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/009</td>
+                    <td>RE (Water Supply)</td>
+                    <td>PM Zahir khan & brothers (ZKB)</td>
+                    <td>02-Aug-23</td>
+                    <td>04-Aug-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/10.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Issuance of contruction drawing for water treatement plant.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/011</td>
+                    <td>RE (Water Supply)</td>
+                    <td>PM Zahir khan & brothers (ZKB)</td>
+                    <td>05-Aug-23</td>
+                    <td>10-Aug-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/11.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Minutes of meeting Dated 03-08-2023</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/012</td>
+                    <td>RE (Water Supply)</td>
+                    <td>PM Zahir khan & brothers (ZKB)</td>
+                    <td>08-Aug-23</td>
+                    <td>10-Aug-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/12.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Impediments in carrying out construction activities in WTP area.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/016</td>
+                    <td>RE (Water Supply)</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>25-Aug-23</td>
+                    <td>28-Aug-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/13.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Request for disassemble of pre-cast boundry wall (40 feet) installed bh PHE at the approach of access road to WTP.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/015</td>
+                    <td>RE (Water Supply)</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>26-Aug-23</td>
+                    <td>28-Aug-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/14.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Submission of IFC drawings.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/014</td>
+                    <td>RE (Water Supply)</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>26-Aug-23</td>
+                    <td>15-Sep-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/15.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Submission of insurance polities as per the contract clause GCC/PCC 18 of the contract.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/027</td>
+                    <td>RE (Water Supply)</td>
+                    <td>Project Director (PMU).</td>
+                    <td>16-Sep-23</td>
+                    <td></td> <!-- Add receiving date if available -->
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/16.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Shifting and storingof PHED assets from chuna WTP site to identified neighborhood location.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/030</td>
+                    <td>RE (Water Supply)</td>
+                    <td>PM Zahir khan & brothers (ZKB)</td>
+                    <td>25-Sep-23</td>
+                    <td></td> <!-- Add receiving date if available -->
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/17.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Submission of quotation for conducting standard penetration test (spt)</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/028</td>
+                    <td>RE (Water Supply)</td>
+                    <td>PM Zahir khan & brothers (ZKB)</td>
+                    <td>04-Oct-23</td>
+                    <td>27-Sep-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/18.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Renewal of advance payment guarantee for OCB/KPCIP/02: Procurement of works for improvement/construction of WTP.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-1/008</td>
+                    <td>RE (Water Supply)</td>
+                    <td>PM Zahir khan & brothers (ZKB)</td>
+                    <td>03-Oct-23</td>
+                    <td>27-Sep-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/19.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Submission of retaining wall structure owing to loose fill and depressed levels at project site.</td>
+                    <td>KPCIP/ZKB/ATD/LGE&RDD/2023/33</td>
+                    <td>PM Zahir khan & brothers (ZKB)</td>
+                    <td>RE (Water Supply)</td>
+                    <td>28-Sep-23</td>
+                    <td>18-Sep-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/20.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>Submission of topographic cross section of 3 structures overlapping to private property & submission of retaining wall structure owing to loose fill and depressed levels at WTP project site.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/029</td>
+                    <td>The Design Manager PMCSC-KPCIP</td>
+                    <td>RE (Water Supply)</td>
+                    <td>27-Sep-23</td>
+                    <td>27-Sep-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/21.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>Submission of monthly progress report under clause 4.21 (progress reports) of GCC/PCC.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/033</td>
+                    <td>PM Zahir khan & brothers (ZKB)</td>
+                    <td>RE (Water Supply)</td>
+                    <td>27-Sep-23</td>
+                    <td>28-Sep-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/22.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>Handing and taking of cut trees at WTP area.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/032</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>PM Zahir khan & brothers (ZKB)</td>
+                    <td>19-Sep-23</td>
+                    <td>28-Sep-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/23.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>Submission of company profile for anti-termite source approval.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/034</td>
+                    <td>PM Zahir khan & brothers (ZKB)</td>
+                    <td>RE (Water Supply)</td>
+                    <td>19-Sep-23</td>
+                    <td>28-Sep-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/24.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>Inventory of PHED assets (WTP Project)</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/036</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>RE (Water Supply)</td>
+                    <td>19-Sep-23</td>
+                    <td>04-Oct-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/25.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>Submission of 3x Financial quotations for standard penetration test (SPT) at project site.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/035</td>
+                    <td>PM Zahir khan & brothers (ZKB)</td>
+                    <td>RE (Water Supply)</td>
+                    <td>18-Sep-23</td>
+                    <td>04-Oct-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/26.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>Submission of Test Results/Reports for Construction Materials</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/038</td>
+                    <td>RE (Water Supply)</td>
+                    <td>ZKB-M/S T.T SH-INSAAT LIMITED LIBALITY COMPANY (JV)</td>
+                    <td>12-Oct-23</td>
+                    <td>18-Oct-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/27.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>Submission of Company Brochure & Sample for Water Stopper</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/039</td>
+                    <td>RE (Water Supply)</td>
+                    <td>ZKB-M/S T.T SH-INSAAT LIMITED LIBALITY COMPANY (JV)</td>
+                    <td>12-Oct-23</td>
+                    <td>18-Oct-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/28.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>Request for Removal of Tree Stems from project Site</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/040</td>
+                    <td>RE (Water Supply)</td>
+                    <td>Chief Executive Officer WSSCA</td>
+                    <td>16-Oct-23</td>
+                    <td>18-Oct-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/29.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>Submission of design for "Project Information Board"</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/041</td>
+                    <td>RE (Water Supply)</td>
+                    <td>ZKB-M/S T.T SH-INSAAT LIMITED LIBALITY COMPANY (JV)</td>
+                    <td>16-Oct-23</td>
+                    <td>18-Oct-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/30.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>31</td>
+                    <td>Submission of Standard Penetration Test (SPT) Report WTP Site</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/042</td>
+                    <td>Geo-Technical Expert, PMCSC-KPCIP, Peshawar</td>
+                    <td>RE (Water Supply)</td>
+                    <td>16-Oct-23</td>
+                    <td>18-Oct-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/31.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>32</td>
+                    <td>Minutes of meeting Dated 11-10-2023</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/043</td>
+                    <td>RE (Water Supply)</td>
+                    <td>ZKB-M/S T.T SH-INSAAT LIMITED LIBALITY COMPANY (JV)</td>
+                    <td>16-Oct-23</td>
+                    <td>18-Oct-23</td>
+                    <td>
+                        <a class="download-button" href="Incoming-Letters/32.pdf" download>View and Download File</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>33</td>
+                    <td>Non-Compliance under sub class 6.7 & 4.18</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/044</td>
+                    <td>RE (Water Supply)</td>
+                    <td>ZKB-M/S T.T SH-INSAAT LIMITED LIBALITY COMPANY (JV)</td>
+                    <td>20-Oct-23</td>
+                    <td>23-Oct-23</td>
+                    <td>
+                      <a class="download-button" href="Incoming-Letters/33.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>34</td>
+                    <td>Discrepancy of Steel DIA's in Construction drawing & their market availability</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/045</td>
+                    <td>RE (Water Supply)</td>
+                    <td>ZKB-M/S T.T SH-INSAAT LIMITED LIBALITY COMPANY (JV)</td>
+                    <td>23-Oct-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Incoming-Letters/34.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>35</td>
+                    <td>Contractors authorized representative deputy project manager (DPM)</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/048</td>
+                    <td>RE (Water Supply)</td>
+                    <td>ZKB-M/S T.T SH-INSAAT LIMITED LIBALITY COMPANY (JV)</td>
+                    <td>24-Oct-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Incoming-Letters/35.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>36</td>
+                    <td>Submission of detailed time programme/working schedule in accordance with sub clause 8.3 of GCC/PCC.</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/049</td>
+                    <td>RE (Water Supply)</td>
+                    <td>ZKB-M/S T.T SH-INSAAT LIMITED LIBALITY COMPANY (JV)</td>
+                    <td>24-Oct-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Incoming-Letters/36.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>37</td>
+                    <td>Submission of Steel MTC/Brochure for approval</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/050</td>
+                    <td>RE (Water Supply)</td>
+                    <td>ZKB-M/S T.T SH-INSAAT LIMITED LIBALITY COMPANY (JV)</td>
+                    <td>24-Oct-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Incoming-Letters/37.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>38</td>
+                    <td>Submission of Corporate company profile of FF Steel</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/051</td>
+                    <td>RE (Water Supply)</td>
+                    <td>ZKB-M/S T.T SH-INSAAT LIMITED LIBALITY COMPANY (JV)</td>
+                    <td>25-Oct-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Incoming-Letters/38.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>39</td>
+                    <td>Submittal of Cement MTC/Brochure for Approval</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/052</td>
+                    <td>RE (Water Supply)</td>
+                    <td>ZKB-M/S T.T SH-INSAAT LIMITED LIBALITY COMPANY (JV)</td>
+                    <td>24-Oct-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Incoming-Letters/39.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>40</td>
+                    <td>Submission of Company Brochure of "Decora" for water stopper</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/053</td>
+                    <td>RE (Water Supply)</td>
+                    <td>ZKB-M/S T.T SH-INSAAT LIMITED LIBALITY COMPANY (JV)</td>
+                    <td>25-Oct-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Incoming-Letters/40.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>41</td>
+                    <td>Submission of Company Brochure and Sample for water Stopper</td>
+                    <td>KPCIP/PMCSC/RE-ATD/CW-02/Lot-2/054</td>
+                    <td>RE (Water Supply)</td>
+                    <td>ZKB-M/S T.T SH-INSAAT LIMITED LIBALITY COMPANY (JV)</td>
+                    <td>25-Oct-23</td>
+                    <td></td>
+                    <td>
+                      <a class="download-button" href="Incoming-Letters/41.pdf" download>View and Download File</a>
+                    </td>
+                  </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+   <!-- PDF.js viewer container -->
+   <div id="pdfViewerContainer" style="display: none;">
+    <div id="pdfViewer"></div>
+</div>
+
+<!-- PDF.js library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.js"></script>
+
+<script>
+    // Add JavaScript code for filtering documents and viewing PDF files
+    const searchInput = document.getElementById('searchInput');
+    const lettersTableContainer = document.getElementById('lettersTableContainer');
+    const documentTable = document.getElementById('documentTable');
+    const rows = documentTable.getElementsByTagName('tr');
+    const pdfViewerContainer = document.getElementById('pdfViewerContainer');
+    const pdfViewer = document.getElementById('pdfViewer');
+
+    searchInput.addEventListener('keyup', () => {
+        const searchText = searchInput.value.toLowerCase();
+
+        for (let i = 1; i < rows.length; i++) {
+            const cells = rows[i].getElementsByTagName('td');
+            let found = false;
+
+            for (let j = 0; j < cells.length - 1; j++) {
+                const cellText = cells[j].textContent.toLowerCase();
+
+                if (cellText.includes(searchText)) {
+                    found = true;
+                    break;
+                }
+            }
+
+            if (found) {
+                rows[i].style.display = '';
+            } else {
+                rows[i].style.display = 'none';
+            }
+        }
+    });
+
+    function viewFile(pdfFile) {
+        PDFJS.getDocument(pdfFile).then((pdfDoc) => {
+            pdfViewerContainer.style.display = 'block';
+
+            for (let i = 1; i <= pdfDoc.numPages; i++) {
+                pdfDoc.getPage(i).then((page) => {
+                    const canvas = document.createElement('canvas');
+                    pdfViewer.appendChild(canvas);
+                    page.render({ canvas, viewport: page.getViewport({ scale: 1.0 }) });
+                });
+            }
+        });
+    }
+
+    function loadSubProject(subProjectName) {
+        // Show the container when "Incoming Letters" is clicked
+        lettersTableContainer.style.display = 'block';
+    }
+</script>
+</body>
+</html>
